@@ -6,6 +6,9 @@ const PORT = 3000;
 const clientDir = path.resolve(path.dirname(__dirname), "client");
 
 app.use(express.static(path.resolve(clientDir, "asset")));
+
+
+
 app.get('/', (req, res)=>{
     const indexPath = path.join(clientDir, "index.html");
     res.sendFile(indexPath);
