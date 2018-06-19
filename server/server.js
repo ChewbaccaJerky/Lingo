@@ -2,7 +2,7 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 8080;
 const clientDir = path.resolve(path.dirname(__dirname), "client");
 
 app.use(express.static(path.resolve(clientDir, "asset")));
